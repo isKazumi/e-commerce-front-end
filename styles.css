@@ -427,6 +427,10 @@ nav .fly-item {
         display: none;
     }
 
+    nav li.has-child:hover .mega {
+        display: block;
+    }
+
     nav .mega .wrapper {
         display: flex;
     }
