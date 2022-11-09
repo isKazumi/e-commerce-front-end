@@ -115,7 +115,7 @@ h4 {
     margin-right: -0.938em;
 }
 
-.column .row {
+.column.row {
     padding: 0 0.938em;
 }
 
@@ -426,6 +426,13 @@ nav .fly-item {
     align-items: center;
 }
 
+.dpt-menu .has-child:hover ul {
+    display: block;
+}
+
+.dpt-menu .has-child li a:hover {
+    text-decoration: underline;
+}
 
 /* search form  */
 .header-main .right {
@@ -443,7 +450,7 @@ form.search input {
     outline: 0;
     width: var(--persen100);
     border-radius: 7px;
-    font-size: -.9em;
+    font-size: 0.9em;
     font-weight: var(--fw3);
 }
 
@@ -466,7 +473,7 @@ form.search button {
     color: var(--white-color);
     border-radius: 0 7px 7px 0;
     cursor: pointer;
-    transition: var(--trans-background-color);
+    transition: var(--trans-color);
 }
 
 form.search button:hover {
@@ -506,7 +513,7 @@ form.search button:hover {
         width: var(--persen100);
         height: auto;
         top: auto;
-        left: o;
+        left: 0;
         right: 0;
         padding: 2.5em;
         line-height: 2em;
@@ -603,4 +610,60 @@ form.search button:hover {
         padding: 0 1.5em;
         border-bottom: 1px solid var(--border-color);
     }
+
+    .dpt-menu .has-child>ul,
+    .dpt-menu .mega {
+        position: absolute;
+        top: 0;
+        left: var(--persen100);
+        width: var(--persen100);
+        height: auto;
+        min-height: var(--persen100);
+        padding: 1.5em;
+        font-size: var(--font-small);
+        line-height: 2.5em;
+        border: 1px solid var(--border-color);
+        border-top: 0;
+        display: none;
+        background-position: right bottom;
+        background-repeat: no-repeat;
+        background-size: auto;
+    }
+
+    .dpt-menu .beauty ul {
+        background-image: url(assets/menu/menu_bg1.jpg);
+    }
+
+    .dpt-menu .electric ul {
+        background-image: url(assets/menu/menu_bg2.jpg);
+    }
+
+    .dpt-menu .fashion ul {
+        background-image: url(assets/menu/menu_bg3.jpg);
+    }
+
+    .dpt-menu .homekit .mega {
+        background-image: url(assets/menu/menu_bg4.jpg);
+    }
+
+    .dpt-menu .has-child> :where(ul, .mega)::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(90deg, rgba(225, 255, 225, 1) 0%, rgb(225, 225, 225, 0) 0%);
+    }
+
+    .dpt-menu .mega {
+        width: auto;
+        min-width: var(--persen100);
+    }
+
+    .dpt-menu .has-child:hover .mega {
+        display: flex;
+    }
+
+
 }
