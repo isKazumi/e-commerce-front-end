@@ -218,11 +218,11 @@ h4 {
     display: none;
 }
 
-.header-top .right ul ul li a {
+:where(.header-top) .right ul ul li a {
     padding: 0.25em 1em;
 }
 
-.header-top .right ul ul li.current a {
+:where(.header-top, .thetop-nav) .right ul ul li.current a {
     background-color: var(--border-color);
 }
 
@@ -540,7 +540,17 @@ form.search button:hover {
     font-weight: var(--fw3);
     line-height: 28px;
     padding-left: 3em;
+
+    height: auto;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height cubic-bezier(0.215, 0.610, 0.355, 1);
 }
+
+.off-canvas .expand>:where(ul, .mega) {
+    max-height: 2000px;
+}
+
 
 .off-canvas .thetop-nav ul,
 .off-canvas nav>ul {
@@ -549,6 +559,7 @@ form.search button:hover {
     font-size: var(--font-small);
     line-height: 36px;
     padding-top: 1.25em;
+    margin: 1.25em 0;
     border-top: 1px solid var(--border-color);
 }
 
@@ -571,6 +582,22 @@ form.search button:hover {
 
 .off-canvas .has-child {
     width: var(--persen100);
+}
+
+.off-canvas .thetop-nav .right>ul> :where(:nth-child(4), li:where(:nth-child(5)))>a {
+    display: none;
+}
+
+.off-canvas .thetop-nav .right ul ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.off-canvas .thetop-nav .right ul ul a {
+    padding: 0.5em;
+    border: 1px solid var(--border-color);
+    line-height: 16px;
+    margin: 0 0.5em 0.5em 0;
 }
 
 
