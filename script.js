@@ -7,7 +7,7 @@ function copyMenu() {
   let navPlace = document.querySelector('.off-canvas nav');
   navPlace.innerHTML = mainNav.innerHTML;
 
-  let topNav = document.querySelector('.header-top');
+  let topNav = document.querySelector('.header-top .wrapper');
   let topPlace = document.querySelector('.off-canvas .thetop-nav');
   topPlace.innerHTML = topNav.innerHTML;
 }
