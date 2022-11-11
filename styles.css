@@ -488,6 +488,17 @@ form.search button:hover {
     background-color: var(--white-color);
     overflow-y: auto;
     z-index: 999;
+    transform: translateY(-100%);
+    visibility: hidden;
+    transition: transfrom .4s, visibility .4s;
+    will-change: transfrom, visibility;
+}
+
+.showmenu .site-off {
+    transform: translateX(0);
+    visibility: visible;
+    touch-action: auto;
+    transform: transfrom .4s 0s, visibility 0s 0s;
 }
 
 .off-canvas {
