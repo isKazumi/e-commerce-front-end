@@ -532,6 +532,23 @@ form.search button:hover {
     background-color: var(--sect-dark-color);
 }
 
+/* BRTANDS */
+.brands .wrapper {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 2em 0;
+}
+
+.brands .item img {
+    opacity: .25;
+    transition: opacity .5s;
+}
+
+.brands .item a:hover img {
+    opacity: 1;
+}
+
+
 /* responsive nav menu */
 .site-off {
     position: fixed;
