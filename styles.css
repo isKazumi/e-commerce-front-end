@@ -871,7 +871,7 @@ form.search button:hover {
     /* slider */
 
     .slider>div>.wrapper {
-        width: calc(100% -(300px + 2em));
+        width: calc(100% - (300px + 2em));
         margin-left: auto;
     }
 
