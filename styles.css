@@ -739,7 +739,7 @@ form.search button:hover {
         line-height: 2em;
         background-color: var(--light-bg-color);
         box-shadow: rgb(0, 0, 0/20%) 0 30px 20px -30px;
-
+        z-index: 99;
 
         display: none;
     }
